@@ -15,22 +15,28 @@ public class Task1 {
         final String inputRequest = "Please, type in double value";
 
         System.out.println(inputRequest);
-        while(sc.hasNextDouble()){
-            a = sc.nextDouble();
+        while(!sc.hasNextDouble()){
+            sc.next();
+            System.out.println(inputRequest);
         }
+        a = sc.nextDouble();
 
         System.out.println(inputRequest);
-        while(sc.hasNextDouble()){
-            b = sc.nextDouble();
+        while(!sc.hasNextDouble()){
+            sc.next();
+            System.out.println(inputRequest);
         }
+        b = sc.nextDouble();
 
         System.out.println(inputRequest);
-        while(sc.hasNextDouble()){
-            c = sc.nextDouble();
+        while(!sc.hasNextDouble()){
+            sc.next();
+            System.out.println(inputRequest);
         }
+        c = sc.nextDouble();
 
         z = ((a - 3) * b /2) + c;
 
-        System.out.println(z);
+        System.out.println("Result is: " + z);
     }
 }
