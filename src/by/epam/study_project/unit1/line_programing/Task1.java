@@ -37,6 +37,6 @@ public class Task1 {
 
         z = ((a - 3) * b /2) + c;
 
-        System.out.println("Result is: " + z);
+        System.out.println("The result is: " + z);
     }
 }

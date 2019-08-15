@@ -16,7 +16,7 @@ public class Task2 {
         double c = 0;
         double result = 0;
         Scanner sc = new Scanner(System.in);
-        String inputRequest = "Please type in double value";
+        final String inputRequest = "Please type in double value";
 
         System.out.println(inputRequest);
         while(!sc.hasNextDouble()){
