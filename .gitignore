@@ -1,3 +1,5 @@
 epam_study.iml
 .idea
 out/
+#src/by/epam/study_project/unit1/line_programing/Test.java
+src/**/Test.java

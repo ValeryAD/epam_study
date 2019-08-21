@@ -36,10 +36,5 @@ public class Task3 {
         result /= cos(toRadians(x) - sin(toRadians(y)));
         result *= tan(toRadians(x*y));
 
-        System.out.println("The result is : " + result);
-
-
-
-
-    }
+        System.out.println("The result is : " + result); }
 }
