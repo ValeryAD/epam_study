@@ -16,19 +16,19 @@ public class Task3 {
         double y = 0;
         double result = 0;
         Scanner sc = new Scanner(System.in);
-        final String inputRequest = "Please, type in double value";
+        final String INPUT_REQUEST = "Please, type in double value";
 
-        System.out.println(inputRequest);
+        System.out.println(INPUT_REQUEST);
         while(!sc.hasNextDouble()){
             sc.next();
-            System.out.println("Please, type in double value");
+            System.out.println(INPUT_REQUEST);
         }
         x = sc.nextDouble();
 
-        System.out.println(inputRequest);
+        System.out.println(INPUT_REQUEST);
         while(!sc.hasNextDouble()){
             sc.next();
-            System.out.println("Please, type in double value");
+            System.out.println(INPUT_REQUEST);
         }
         y = sc.nextDouble();
 
