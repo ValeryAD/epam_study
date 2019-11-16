@@ -12,26 +12,27 @@ public class Task1 {
         double b = 0;
         double c = 0;
         Scanner sc = new Scanner(System.in);
-        final String INPUT_REQUEST = "Please, type in double value";
+        final String inputRequest = "Please, type in double value";
+        final String wrongInputMessage = "Wrong input";
 
-        System.out.println(INPUT_REQUEST);
+        System.out.println(inputRequest);
         while(!sc.hasNextDouble()){
             sc.next();
-            System.out.println(INPUT_REQUEST);
+            System.out.println(wrongInputMessage + "\n" + inputRequest);
         }
         a = sc.nextDouble();
 
-        System.out.println(INPUT_REQUEST);
+        System.out.println(inputRequest);
         while(!sc.hasNextDouble()){
             sc.next();
-            System.out.println(INPUT_REQUEST);
+            System.out.println(wrongInputMessage + "\n" + inputRequest);
         }
         b = sc.nextDouble();
 
-        System.out.println(INPUT_REQUEST);
+        System.out.println(inputRequest);
         while(!sc.hasNextDouble()){
             sc.next();
-            System.out.println(INPUT_REQUEST);
+            System.out.println(wrongInputMessage + "\n" + inputRequest);
         }
         c = sc.nextDouble();
 
