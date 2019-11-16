@@ -1,4 +1,4 @@
-package by.epam.study_project.unit1.line_programing;
+package by.epam.study_project.line_programing;
 
 import java.util.Scanner;
 import static java.lang.Math.toRadians;

@@ -1,18 +1,22 @@
-package by.epam.study_project.unit1.line_programing;
+package by.epam.study_project.line_programing;
 
 import java.util.Scanner;
 
-public class Task1 {
+import static java.lang.Math.sqrt;
+import static java.lang.Math.pow;
 
-    //1. Найдите значение функции: z = ( (a – 3 ) * b / 2) + c.
+public class Task2 {
 
-    public static void main (String[] args){
-        double z = 0;
+    //2. Вычислить значение выражения по формуле (все переменные принимают действительные значения):
+
+    public static void main(String[] args) {
+
         double a = 0;
         double b = 0;
         double c = 0;
+        double result = 0;
         Scanner sc = new Scanner(System.in);
-        final String INPUT_REQUEST = "Please, type in double value";
+        final String INPUT_REQUEST = "Please type in double value";
 
         System.out.println(INPUT_REQUEST);
         while(!sc.hasNextDouble()){
@@ -26,17 +30,22 @@ public class Task1 {
             sc.next();
             System.out.println(INPUT_REQUEST);
         }
+
         b = sc.nextDouble();
 
         System.out.println(INPUT_REQUEST);
+
         while(!sc.hasNextDouble()){
             sc.next();
             System.out.println(INPUT_REQUEST);
         }
         c = sc.nextDouble();
 
-        z = ((a - 3) * b /2) + c;
+        result = b + sqrt(pow(b, 2) + 4 * a * c);
+        result /= 2*a;
+        result -= pow(a,3)*c;
+        result += pow(b,-2);
 
-        System.out.println("The result is: " + z);
+        System.out.println("The result is : " + result);
     }
 }
