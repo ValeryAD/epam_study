@@ -8,76 +8,62 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class Task5 {
-
+    //TODO убрать миллисекунды!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
     public static void main(String[] args) {
         final int SECOND = 1000;
         final int MIN = 60 * SECOND;
         final int HOUR = 60 * MIN;
         final int DAY = 24 * HOUR;
-        final String inputRequest = "Please type in time value in milliseconds (long value)";
+        final String INPUT_REQUES = "Please type in time value in milliseconds (long value)";
         final String FORMAT_REQUEST
                 = "Which hours format should be represented?" +
                 "\n\t 1. Hours within day (0-23) " +
                 "\n\t 2. Full amount of hours" +
-                "Your choice 1 or 2?";
+                "\n\t 0. To exit" +
+                "\nYour formatChoice: 1,2 or 0?";
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println(inputRequest);
+        System.out.println(INPUT_REQUES);
 
         while (!sc.hasNextLong()) {
-            System.out.println(inputRequest);
+            System.out.println(INPUT_REQUES);
             sc.next();
         }
-
         long millis = sc.nextLong();
 
-        int choice = 0;
-
-        while (true) {
+        int formatChoice = -1;
+        do {
+            System.out.println(FORMAT_REQUEST);
             while (!sc.hasNextInt()) {
                 System.out.println(FORMAT_REQUEST);
                 sc.next();
             }
 
-            choice = sc.nextInt();
-            if (choice == 1 && choice == 2) {       //TODO make a decision if it needs using  '0' to exit
-                break;
-            }else if(choice == 0) {
-                System.exit(0);
-            }else{
-                continue;
-            }
+            formatChoice = sc.nextInt();
 
+        } while (!(formatChoice == 1 || formatChoice == 2 || formatChoice == 0));
+
+        long hours = 0;
+        long mins = 0;
+        long seconds = 0;
+
+        if (formatChoice == 1) {
+            long timeWithoutDays = millis % DAY;
+            hours = timeWithoutDays / HOUR;
+            mins = timeWithoutDays % HOUR / MIN;
+            seconds = timeWithoutDays % MIN / SECOND;
+        } else if (formatChoice == 2) {
+            hours = millis / HOUR;
+            mins = (millis - (hours * HOUR)) / MIN;
+            seconds = (millis - (hours * HOUR) - (mins * MIN)) / SECOND;
+        } else if (formatChoice == 0) {
+            System.exit(0);
         }
 
+        //Report
 
-        //long millis = 9876543210L;
-
-        long timeWithoutDays = millis % DAY;
-        long hours = timeWithoutDays / HOUR;
-        long mins = timeWithoutDays % HOUR / MIN;
-        long seconds = timeWithoutDays % MIN / SECOND;
-
-
-/*
-        long hours = millis / (HOUR);
-
-        long mins = (millis - hours * HOUR) / (60 * 1000);
-        long seconds = (millis - hours * HOUR - mins * MIN) / SECOND;
-*/
-        System.out.println(hours);
-        System.out.println(mins);
-        System.out.println(seconds);
-
-        System.out.println("----------------------");
-
-        Date da = new Date(millis);
-
-        System.out.println(da.getHours());
-        System.out.println(da.getMinutes());
-        System.out.println(da.getSeconds());
-
+        System.out.printf("%02dч %02dмин %02dс", hours, mins, seconds);
     }
 }

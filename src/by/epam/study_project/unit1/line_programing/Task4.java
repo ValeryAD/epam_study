@@ -31,9 +31,9 @@ public class Task4 {
         } while (isNotCorrectValue);
 
 
-        int myInteger = (int) r;
-        int reminder = (int) (r * CAPACITY - myInteger * CAPACITY);
-        result = reminder + ((double) myInteger / CAPACITY);
+        int intValue = (int) r;
+        int reminder = (int) (r * CAPACITY - intValue * CAPACITY);
+        result = reminder + ((double) intValue / CAPACITY);
         System.out.print(result);
     }
 }
