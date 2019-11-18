@@ -13,14 +13,14 @@ public class Task5 {
         final int MIN = 60;
         final int HOUR = 60 * MIN;
         final int DAY = 24 * HOUR;
-        final String inputRequest = "Please type in time value in seconds";
-        final String wrongInputMessage = "Wrong input";
+        final String inputRequest = "Введите количество секунд";
+        final String wrongInputMessage = "Неверный ввод";
         final String formatRequest
-                = "Which hours format should be represented?" +
-                "\n\t 1. Hours within day (0-23) " +
-                "\n\t 2. Full amount of hours" +
-                "\n\t 0. To exit" +
-                "\nYour formatChoice: 1,2 or 0?";
+                = "В каком формате представить часы?" +
+                "\n\t 1. Часы дня (0-23) " +
+                "\n\t 2. Полное количество часов" +
+                "\n\t 0. Выход" +
+                "\nВаш выбор: 1,2 or 0?";
 
         //getting data from user
         Scanner sc = new Scanner(System.in);

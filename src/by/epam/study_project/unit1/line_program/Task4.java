@@ -14,8 +14,8 @@ public class Task4 {
         double r = 0;
         double result = 0;
         Scanner sc = new Scanner(System.in);
-        final String inputRequest = "Please, type in value (double) \nbetween 999,999 and -999,999";
-        final String wrongInputMessage = "Wrong input";
+        final String inputRequest = "Введите значение \nмежду 999,999 и -999,999";
+        final String wrongInputMessage = "Неверный ввод";
         boolean isNotCorrectValue = false;
 
         do {

@@ -11,14 +11,14 @@ public class Task1 {
         int x = 0;
         int result = 0;
         Scanner sc = new Scanner(System.in);
-        final String inputRequest = "Please, type in integer value";
-        final String wrongInputMessage = "Wrong input";
+        final String inputRequest = "Введите целое число";
+        final String wrongInputMessage = "Неверный ввод";
 
         while (!sc.hasNextInt()) {
             sc.next();
             System.out.println(wrongInputMessage + "\n" + inputRequest);
         }
-        x = sc.nextInt();
+        x = Math.abs(sc.nextInt());
 
         for(int i = 1; i <= x; i++){  //от одного до введенного пользователем включительно
             result += i;

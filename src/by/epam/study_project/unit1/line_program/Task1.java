@@ -12,8 +12,8 @@ public class Task1 {
         double b = 0;
         double c = 0;
         Scanner sc = new Scanner(System.in);
-        final String inputRequest = "Please, type in value (double)";
-        final String wrongInputMessage = "Wrong input";
+        final String inputRequest = "Введите значение";
+        final String wrongInputMessage = "Неверный ввод";
 
         System.out.println(inputRequest);
         while(!sc.hasNextDouble()){
