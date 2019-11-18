@@ -9,7 +9,7 @@ public class Task3 {
         final String negAns = "doesn't belong";
 
         Point a = new Point(2, 2);
-        Point b = new Point(10, 10); 
+        Point b = new Point(10, 10);
         Point c = new Point(7, 7);
 
         int exp1 = (c.getX() - b.getX()) * (a.getY() - b.getY());
