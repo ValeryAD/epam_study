@@ -10,8 +10,8 @@ public class Task6 {
         final String posAnswer = "true";
         final String negAnswer = "false";
 
-        int x = -4;
-        int y = -3;
+        int x = -2;
+        int y = 4;
 
         if (abs(x) > 4 || y > 4 || y < -3) {
             System.out.println(negAnswer);
