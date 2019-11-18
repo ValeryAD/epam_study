@@ -1,8 +1,10 @@
-package by.epam.study_project.line_programing;
+package by.epam.study_project.unit1.branching;
 
-import java.util.Scanner;
+/*1. Даны два угла треугольника (в градусах). Определить, существует ли такой треугольник, и если да, то будет ли
+        он прямоугольным.*/
 
-public class Task7 {
+
+public class Task1 {
 
     final public static int SUM_OF_ANGLES_OF_TRIANGLE = 180;
     final public static int RIGHT_ANGLE = 90;
