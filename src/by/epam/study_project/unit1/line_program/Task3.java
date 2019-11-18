@@ -16,20 +16,21 @@ public class Task3 {
         double y = 0;
         double result = 0;
         Scanner sc = new Scanner(System.in);
-        final String inputRequest = "Введите значение";
+        final String inputRequest = "Введите значение ";
         final String wrongInputMessage = "Неверный ввод";
+        final String answer = "Результат ";
 
-        System.out.println(inputRequest);
+        System.out.println(inputRequest + "x");
         while(!sc.hasNextDouble()){
             sc.next();
-            System.out.println(wrongInputMessage + "\n" + inputRequest);
+            System.out.println(wrongInputMessage + "\n" + inputRequest + "x");
         }
         x = sc.nextDouble();
 
-        System.out.println(inputRequest);
+        System.out.println(inputRequest + "y");
         while(!sc.hasNextDouble()){
             sc.next();
-            System.out.println(wrongInputMessage + "\n" + inputRequest);
+            System.out.println(wrongInputMessage + "\n" + inputRequest + "y");
         }
         y = sc.nextDouble();
 
@@ -37,5 +38,5 @@ public class Task3 {
         result /= cos(toRadians(x) - sin(toRadians(y)));
         result *= tan(toRadians(x*y));
 
-        System.out.println("The result is : " + result); }
+        System.out.println(answer + result); }
 }

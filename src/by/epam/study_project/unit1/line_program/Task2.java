@@ -16,29 +16,28 @@ public class Task2 {
         double c = 0;
         double result = 0;
         Scanner sc = new Scanner(System.in);
-        final String inputRequest = "Введите значение";
+        final String inputRequest = "Введите значение ";
         final String wrongInputMessage = "Неверный ввод";
+        final String answer = "Результат ";
 
-        System.out.println(inputRequest);
+        System.out.println(inputRequest + "a");
         while(!sc.hasNextDouble()){
             sc.next();
-            System.out.println(wrongInputMessage + "\n" + inputRequest);
+            System.out.println(wrongInputMessage + "\n" + inputRequest + "a");
         }
         a = sc.nextDouble();
 
-        System.out.println(inputRequest);
+        System.out.println(inputRequest + "b");
         while(!sc.hasNextDouble()){
             sc.next();
-            System.out.println(wrongInputMessage + "\n" + inputRequest);
+            System.out.println(wrongInputMessage + "\n" + inputRequest + "b");
         }
-
         b = sc.nextDouble();
 
-        System.out.println(inputRequest);
-
+        System.out.println(inputRequest + "c");
         while(!sc.hasNextDouble()){
             sc.next();
-            System.out.println(wrongInputMessage + "\n" + inputRequest);
+            System.out.println(wrongInputMessage + "\n" + inputRequest + "c");
         }
         c = sc.nextDouble();
 
@@ -47,6 +46,6 @@ public class Task2 {
         result -= pow(a,3)*c;
         result += pow(b,-2);
 
-        System.out.println("The result is : " + result);
+        System.out.println(answer + result);
     }
 }
