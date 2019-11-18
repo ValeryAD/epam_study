@@ -12,7 +12,7 @@ public class Task1 {
         double b = 0;
         double c = 0;
         Scanner sc = new Scanner(System.in);
-        final String inputRequest = "Please, type in double value";
+        final String inputRequest = "Please, type in value (double)";
         final String wrongInputMessage = "Wrong input";
 
         System.out.println(inputRequest);

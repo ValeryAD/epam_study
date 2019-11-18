@@ -16,7 +16,7 @@ public class Task3 {
         double y = 0;
         double result = 0;
         Scanner sc = new Scanner(System.in);
-        final String inputRequest = "Please, type in double value";
+        final String inputRequest = "Please, type in value (double)";
         final String wrongInputMessage = "Wrong input";
 
         System.out.println(inputRequest);
