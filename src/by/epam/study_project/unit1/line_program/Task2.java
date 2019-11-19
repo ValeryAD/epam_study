@@ -18,7 +18,6 @@ public class Task2 {
         Scanner sc = new Scanner(System.in);
         final String inputRequest = "Введите значение ";
         final String wrongInputMessage = "Неверный ввод";
-        final String answer = "Результат ";
 
         System.out.println(inputRequest + "a");
         while(!sc.hasNextDouble()){
@@ -46,6 +45,6 @@ public class Task2 {
         result -= pow(a,3)*c;
         result += pow(b,-2);
 
-        System.out.println(answer + result);
+        System.out.println(result);
     }
 }

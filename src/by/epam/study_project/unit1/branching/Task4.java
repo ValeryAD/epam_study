@@ -10,9 +10,11 @@ public class Task4 {
         int x = 250;
         int y = 120;
         int z = 65;
-        final String pattern = "It %s possible to pull the brick through the hole";
-        final String posAns = "is";
-        final String negAns = "is not";
+        final String brick = String.format("Кирпич %dx%dx%d", x, y, z);
+        final String hole = String.format("отверстие %dx%d", a, b);
+        //final String pattern = " %sпройдет в отверстие %dx%d";
+        final String posAns = " пройдет в ";
+        final String negAns = " не пройдет в ";
         String answer = negAns;
 
 
@@ -28,7 +30,7 @@ public class Task4 {
             answer = posAns;
         }
 
-        System.out.printf(pattern, answer);
+        System.out.printf(brick + answer + hole);
 
     }
 }

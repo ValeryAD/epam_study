@@ -10,11 +10,10 @@ public class Task4 {
     public static void main(String[] args) {
 
         final int CAPACITY = 1000;
-
         double r = 0;
         double result = 0;
         Scanner sc = new Scanner(System.in);
-        final String inputRequest = "Введите значение \nмежду 999,999 и -999,999";
+        final String inputRequest = "Введите значение вида xxx,xxx \nмежду 999,999 и -999,999";
         final String wrongInputMessage = "Неверный ввод";
         boolean isNotCorrectValue = false;
 
@@ -36,7 +35,7 @@ public class Task4 {
         int intValue = (int) r;
         //int reminder = (int) (r % intValue * CAPACITY); //это выражение лаконичней, но иногда из-за double целая часть
         //результата получается на 1 меньше
-        int reminder = (int) (r * 1000 - intValue * 1000); // так всегда правильно
+        int reminder = (int) (r * CAPACITY - intValue * CAPACITY); // так всегда правильно
 
         result = reminder + ((double) intValue / CAPACITY);
         System.out.print(result);

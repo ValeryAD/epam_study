@@ -1,5 +1,5 @@
 package by.epam.study_project.unit1.branching;
-
+//    5. Вычислить значение функции:
 import static java.lang.Math.pow;
 
 /*5. Вычислить значение функции:*/
@@ -11,8 +11,8 @@ public class Task5 {
         double x = 0;
         double result;
         Scanner sc = new Scanner(System.in);
-        final String inputRequest = "Type in value (double) for calculation";
-        final String wrongInputMessage = "Wrong input";
+        final String inputRequest = "Введите значение X";
+        final String wrongInputMessage = "Неверный ввод";
 
         System.out.println(inputRequest);
         while (!sc.hasNextDouble()) {

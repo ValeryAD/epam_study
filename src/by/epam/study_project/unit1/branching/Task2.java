@@ -23,6 +23,5 @@ public class Task2 {
         }
 
         System.out.println(a);
-
     }
 }

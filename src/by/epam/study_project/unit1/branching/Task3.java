@@ -4,9 +4,9 @@ package by.epam.study_project.unit1.branching;
 
 public class Task3 {
     public static void main(String[] args) {
-        final String report = "The points %s the same line";
-        final String positAns = "belong";
-        final String negAns = "doesn't belong";
+        final String report = "Указанные точки %sпринадлежат одной прямой";
+        final String positAns = "";
+        final String negAns = "не ";
 
         Point a = new Point(2, 2);
         Point b = new Point(10, 10);

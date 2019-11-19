@@ -12,11 +12,11 @@ public class Task1 {
     public static void main(String[] args) {
 
         int angle1 = 22;
-        int angle2 = 58;
+        int angle2 = 68;
         boolean isExist = false;
         boolean isRight = false;
-        final String report = "The triangle\n\t -exists: %s;\n\t -is right-angled: %s";
-        final String wrongAngleValue = "Angle value should be positive and above 0";
+        final String report = "Треугольник, с указанными углами \n\t - существует: %s;\n\t - является прямоугольным: %s";
+        final String wrongAngleValue = "Угол треугольника должен быть больше 0";
 
         if (angle1 <= 0 || angle2 <= 0){
             System.out.println(wrongAngleValue);
