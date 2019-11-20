@@ -20,7 +20,7 @@ public class Task7 {
         boolean flag = false;
 
 
-        // получение данных от пользователя
+        //getting data from user
         do {
             flag = false;
 
@@ -42,10 +42,9 @@ public class Task7 {
                 System.out.println(wrongInput + "\n" +
                         negInput + ", " + biggerM);
             }
-
         } while (flag);
 
-
+        //calculation
         for (int i = m; i <= n; i++) {
             System.out.printf(report, i);
             divider = i - 1;
