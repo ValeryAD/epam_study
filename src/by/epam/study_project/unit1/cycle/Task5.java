@@ -4,7 +4,6 @@ package by.epam.study_project.unit1.cycle;
         заданному е. Общий член ряда имеет вид:*/
 
 import java.util.Scanner;
-
 import static java.lang.Math.pow;
 
 public class Task5 {
