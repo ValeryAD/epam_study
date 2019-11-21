@@ -7,19 +7,16 @@ import static java.lang.Math.abs;
 
 public class Task6 {
     public static void main(String[] args) {
-        final String posAnswer = "true";
-        final String negAnswer = "false";
-
+        boolean isBelong;
         int x = -2;
         int y = 4;
 
-        if (abs(x) > 4 || y > 4 || y < -3) {
-            System.out.println(negAnswer);
-        } else if (y > 0 && abs(x) > 2) {
-            System.out.println(negAnswer);
-        } else {
-            System.out.println(posAnswer);
-        }
+
+
+        isBelong = abs(x) <= 4 && y <= 0 && y >= -3;
+        isBelong = isBelong || y > 0 && y <= 4 && abs(x) <= 2;
+
+        System.out.println(isBelong);
 
     }
 }
