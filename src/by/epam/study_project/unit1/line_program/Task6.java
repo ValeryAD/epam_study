@@ -11,12 +11,9 @@ public class Task6 {
         int x = -2;
         int y = 4;
 
-
-
         isBelong = abs(x) <= 4 && y <= 0 && y >= -3;
         isBelong = isBelong || y > 0 && y <= 4 && abs(x) <= 2;
 
         System.out.println(isBelong);
-
     }
 }
