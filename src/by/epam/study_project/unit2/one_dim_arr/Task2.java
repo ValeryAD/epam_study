@@ -9,18 +9,19 @@ import java.util.Arrays;
 public class Task2 {
     public static void main(String[] args) {
         double[] arr = new double[15];
-        double z = 30.0;
+        double z = 22.0;
         int counter = 0;
-        final String report = "Количество замен %d\nотредактированный массив:\n";
+        final String report = "Количество замен %d\n" +
+                "отредактированный массив:\n";
 
         //генерация значений массива
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = Math.random() * 100;
+            arr[i] = 2 * i + 1 / Math.pow(2, i);
         }
 
         // замена значений по условию
         for (int i = 0; i < arr.length; i++) {
-            if(arr[i] > z){
+            if (arr[i] > z) {
                 arr[i] = z;
                 counter++;
             }
@@ -28,8 +29,22 @@ public class Task2 {
 
         //вывод
         System.out.printf(report, counter);
-        System.out.println(Arrays.toString(arr));
+        arrayPrint(arr);
+
     }
 
-
+    public static void arrayPrint(double[] arr) {
+        StringBuilder sb = new StringBuilder().append('[');
+        for (double d : arr) {
+            sb.append(d)
+                    .append(',')
+                    .append(' ');
+        }
+        sb.delete(sb.length() - 2, sb.length());
+        sb.append(']');
+        System.out.print(sb);
+    }
 }
+
+
+

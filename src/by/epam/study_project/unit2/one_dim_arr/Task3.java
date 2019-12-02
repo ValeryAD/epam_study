@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class Task3 {
     public static void main(String[] args) {
-        final int n = 30;
+        final int n = 400;
         double[] arr = new double[n];
         double eps = 0.00_000_001;
         Random r = new Random();
@@ -18,19 +18,19 @@ public class Task3 {
         final String report = "Данный массив содержит:\n" +
                 "%d - положительных элементов\n" +
                 "%d - отрицательных элементов\n" +
-                "%d - элементов близких к 0";
+                "%d - нулевых элементов";
 
         // генерация значений массива
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = 1 / Math.pow(2, i);
+            arr[i] = 1 / Math.pow(10, i);
             arr[i] = arr[i] * (r.nextBoolean() ? 1 : -1);
         }
 
         //подсчет количества соответствующих элементов
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > eps) {
+            if (arr[i] > 0) {
                 posCount++;
-            } else if (arr[i] < -eps) {
+            } else if (arr[i] < 0) {
                 negCount++;
             } else {
                 zeroCount++;
