@@ -5,17 +5,20 @@ package by.epam.study_project.unit2.one_dim_arr;
 
 import java.util.Arrays;
 
+
 public class Task2 {
     public static void main(String[] args) {
-        int[] arr = new int[15];
-        int z = 6;
+        double[] arr = new double[15];
+        double z = 30.0;
         int counter = 0;
         final String report = "Количество замен %d\nотредактированный массив:\n";
 
+        //генерация значений массива
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = ((int)(Math.random() * 10) + 1);
+            arr[i] = Math.random() * 100;
         }
 
+        // замена значений по условию
         for (int i = 0; i < arr.length; i++) {
             if(arr[i] > z){
                 arr[i] = z;
@@ -23,6 +26,7 @@ public class Task2 {
             }
         }
 
+        //вывод
         System.out.printf(report, counter);
         System.out.println(Arrays.toString(arr));
     }
