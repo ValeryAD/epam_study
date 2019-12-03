@@ -4,12 +4,12 @@ package by.epam.study_project.unit2.one_dim_arr;
 
 public class Task1 {
     public static void main(String[] args) {
-        int k = 3;
+        int k = 9;
         int[] a = {8, 9, 27, 17, 81, 22, 24, 5};
         int result = 0;
 
         for (int m : a) {
-            if (m % 3 == 0) {
+            if (m % k == 0) {
                 result += m;
             }
         }

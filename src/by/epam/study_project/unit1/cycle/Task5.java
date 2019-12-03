@@ -14,7 +14,7 @@ public class Task5 {
         double sum = 0;
         Scanner sc = new Scanner(System.in);
         final String eInputRequest = "Введите число \'e\'";
-        final String nInputRequest = "Введите число \'n\'";
+        final String nInputRequest = "Введите целое число \'n\'";
         final String wrongInput = "Неверный ввод";
 
         System.out.println(eInputRequest);

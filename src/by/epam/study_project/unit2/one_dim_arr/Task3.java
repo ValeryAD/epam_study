@@ -3,14 +3,12 @@ package by.epam.study_project.unit2.one_dim_arr;
 /*3. Дан массив действительных чисел, размерность которого N. Подсчитать, сколько в нем отрицательных,
         положительных и нулевых элементов.*/
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class Task3 {
     public static void main(String[] args) {
         final int n = 400;
         double[] arr = new double[n];
-        double eps = 0.00_000_001;
         Random r = new Random();
         int zeroCount = 0;
         int posCount = 0;
@@ -38,7 +36,6 @@ public class Task3 {
         }
 
         //вывод
-        System.out.println(Arrays.toString(arr));
         System.out.printf(report, posCount, negCount, zeroCount);
     }
 }
