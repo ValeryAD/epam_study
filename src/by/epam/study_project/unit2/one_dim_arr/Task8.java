@@ -20,18 +20,18 @@ public class Task8 {
 
         // поиск минимального значения и количества его вхождений
         int min = arr[0];
-        int counter = 0;
+        int count = 0;
         for (int i = 1; i < arr.length; i++) {
             if (min == arr[i]) {
-                counter++;
+                count++;
             }
             if (arr[i] < min) {
-                counter = 1;
+                count = 1;
                 min = arr[i];
             }
         }
         // формирование нового массива, без минимальных значений
-        int[] result = new int[arr.length - counter];
+        int[] result = new int[arr.length - count];
         for (int i = 0, j = 0; i < arr.length; i++) {
             if (arr[i] != min) {
                 result[j] = arr[i];
@@ -40,7 +40,7 @@ public class Task8 {
         }
 
         //Вывод результатов
-        System.out.printf(report, min, counter, arrayToString(arr), arrayToString(result));
+        System.out.printf(report, min, count, arrayToString(arr), arrayToString(result));
     }
 
     private static String arrayToString(int[] arr) {

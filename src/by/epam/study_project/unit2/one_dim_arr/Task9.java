@@ -6,10 +6,13 @@ package by.epam.study_project.unit2.one_dim_arr;
 public class Task9 {
     public static void main(String[] args) {
         int[] arr = {2, 3, 5, 3, 5, 3, 2, 2, 3, 3, 3, 2, 2, 2};
+        String report = "В массиве: \n" +
+                "%s\n" +
+                "наименьшее наиболее часто встречающееся число: %d";
 
-        int[] meetingAmount = new int[arr.length]; // В этом массиве будем хранить количество встреч
+        int[] meetingAmount = new int[arr.length]; // В этом массиве будем хранить количество вхождений
 
-        //подсчет количества повторений
+        //подсчет количества вхождений
         for (int i = 0; i < arr.length; i++) {
             int count = 0;
             for (int j = 0; j < arr.length; j++) {
@@ -21,7 +24,7 @@ public class Task9 {
         }
 
         int mostCommonNumber = 0;// наиболее часто встречающееся число
-        int maxMeetAmount = 0; // наибольшее количество встреч
+        int maxMeetAmount = 0; // наибольшее количество вхождений
 
         //определение наиболее часто встречающегося числа
         for (int i = 0; i < meetingAmount.length; i++) {
@@ -35,7 +38,19 @@ public class Task9 {
             }
         }
 
-        System.out.println(mostCommonNumber);
+        //вывод результата
+        System.out.printf(report, arrayToString(arr), mostCommonNumber);
+    }
+
+    private static String arrayToString(int[] arr){
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i : arr) {
+            sb.append(i + ", ");
+        }
+        sb.delete(sb.length() - 2, sb.length());
+        sb.append("]");
+        return sb.toString();
     }
 
 }
