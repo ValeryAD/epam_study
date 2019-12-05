@@ -4,31 +4,34 @@ package by.epam.study_project.unit2.mult_dim_arr;
 
 public class Task1 {
     public static void main(String[] args) {
-        final int n = 5;
-        //int[][] matrix = new int[n][n];
+        final int size = 10;
+        int[][] matrix = new int[size][size];
+        final String fullMatrixReport;
+        final String conditionalMatrixReport;
 
-       /* for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++){
-                matrix[i][j] = (int)(Math.random() * 10 + 1);
-            }
-        }*/
-
-        int[][] matrix = {{1, 5, 1, 2, 2, 8}, {2, 2, 2, 2, 2, 2}, {3, 3, 3, 3, 3, 3,}};
-        //TODO нечетные?
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                boolean odd = i % 2 != 0;
-                boolean biggerFirstEl = matrix[i][0] > matrix[i][matrix[i].length - 1];
-                if (odd) {
-                    System.out.printf("%3d", matrix[i][j]);
-                }
+                matrix[i][j] = (int) (Math.random() * 10 + 1);
             }
-            System.out.println();
         }
 
+        System.out.println("Полная матрица:");
+        printMatrix(matrix, true);
+
+        System.out.println("Только нечетные столбцы, c 1-м элементом больше последнего");
+        printMatrix(matrix, false);
+    }
+
+    //вывод матрицы по условию задания/без условия
+    private static void printMatrix(int[][] matrix, boolean withoutCondition) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                System.out.printf("%3d", matrix[i][j]);
+                boolean odd = j % 2 == 0; //столбцы нечетные по порядку, а не по индексу
+                boolean biggerFirstEl = matrix[0][j] > matrix[matrix.length - 1][j];
+                if (withoutCondition || odd && biggerFirstEl) {
+                    System.out.printf("%3d", matrix[i][j]);
+                } else
+                    System.out.print("   ");
             }
             System.out.println();
         }
