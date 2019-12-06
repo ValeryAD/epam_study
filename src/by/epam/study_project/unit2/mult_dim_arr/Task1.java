@@ -4,8 +4,8 @@ package by.epam.study_project.unit2.mult_dim_arr;
 
 public class Task1 {
     public static void main(String[] args) {
-        final int size = 10;
-        int[][] matrix = new int[size][size];
+        final int n = 10;
+        int[][] matrix = new int[n][n];
         final String fullMatrixReport;
         final String conditionalMatrixReport;
 

@@ -4,8 +4,8 @@ package by.epam.study_project.unit2.mult_dim_arr;
 
 public class Task2 {
     public static void main(String[] args) {
-        int size = 10;
-        int[][] matrix = new int[size][size];
+        int n = 10;
+        int[][] matrix = new int[n][n];
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
