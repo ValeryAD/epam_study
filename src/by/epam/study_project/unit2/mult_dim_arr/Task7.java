@@ -15,7 +15,7 @@ public class Task7 {
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = Math.sin((i * i - j * j) / (double) n);
+                matrix[i][j] = Math.sin(Math.toRadians((i * i - j * j) / (double) n));
                 if (matrix[i][j] > 0) {
                     posCounter++;
                 }

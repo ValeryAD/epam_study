@@ -11,7 +11,7 @@ public class Task6 {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
 
-                //условия при которых каждый из 4-х треульников, образованные диагоналями, заполняется единицами
+                //условия при которых каждый из 4-х треульников, образованных диагоналями, заполняется единицами
                 boolean topLeft = matrix[i].length - 1 - j >= i;
                 boolean bottomRight = matrix[i].length - 1 - j <= i;
                 boolean topRight = j >= i;

@@ -12,9 +12,9 @@ public class Task3 {
         int[][] matrix = new int[n][n];
         final String report = "Матрица:\n" +
                 "%s\n" +
-                "К-я строка:\n" +
+                "%d-я строка:\n" +
                 "%s\n" +
-                "p-й столбец:\n" +
+                "%d-й столбец:\n" +
                 "%s\n";
         String row = new String();
         String column = new String();
@@ -34,7 +34,7 @@ public class Task3 {
             column += String.format("%3d", matrix[i][p - offset]);
         }
 
-        System.out.printf(report, matrixToString(matrix), row, column);
+        System.out.printf(report, matrixToString(matrix),k , row, p, column);
     }
 
     private static String matrixToString(int[][] matrix) {
